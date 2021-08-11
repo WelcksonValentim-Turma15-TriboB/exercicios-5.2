@@ -63,11 +63,11 @@
       document.body.appendChild(elementoH1);
 
       let elementoMain = document.createElement('main');
-      elementoMain.className = 'main-content';
+      elementoMain.classList.add('main-content');
       document.body.appendChild(elementoMain);
 
       let elmentoSection = document.createElement('section');
-      elmentoSection.className = 'center-content';
+      elmentoSection.classList.add('center-content');
       elementoMain.appendChild(elementoSection);
 
       let elementoP = document.createElement('p');
@@ -75,11 +75,11 @@
       elmentoSection.appendChild(elementoP);
 
       let elementoSection2 = document.createElement('section');
-      elementoSection2.className = 'left-content';
+      elementoSection2.classList.add('left-content');
       elementoMain.appendChild(elementoSection2);
 
       let elementoselecion3 = document.createElement('selection');
-      elementoselecion3.className = 'right-content';
+      elementoselecion3.classList.add('right-content');
       elementoMain.appendChild(elementoselecion3);
 
       let elementoImag = document.createElement('imag');
@@ -96,6 +96,32 @@
         elementoLu.appendChild(elementoLi);
       }
 
+      for (let index = 0; index < 3; index +=1){
+        let elmentoH3 = document.createElement('h3');
+        elementoH3.innerHTML = 'teste' +index;
+        elementoMain.appendChild(elementoH3);
+      }
+      // Parte 2, exercicio
+
+      let title = document.querySelector('h1');
+      title.className = 'title';
+
+      let.description = document.getElementsByTagName('h3');
+      for (let index = 0; index < 3; index +=1) {
+        description[index].className = 'description';
+      }
+      
+      let removeLeftContent = document.getElementsByClassName('left-content')[0];
+      elementoMain.removeChild(removeLeftContent);
+
+      let centralizaSection = document.getElementsByClassName('right-content')[0];
+      centralizaSection.style.marginRight='auto';
+      
+      let colorPaiSection = document.getElementsByClassName('center-content')[0];
+      colorPaiSection.parentNode.style.backgroundColor = 'green';
+
+      ul.lastChild.remove();
+      ul.lastChild.remove();
     </script>
   </body> 
 </html>
