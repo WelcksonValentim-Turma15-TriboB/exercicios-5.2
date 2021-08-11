@@ -68,15 +68,27 @@
 
       let elmentoSection = document.createElement('section');
       elmentoSection.className = 'center-content';
-      document.elementoMain.appendChild(elementoSection);
+      elementoMain.appendChild(elementoSection);
 
       let elementoP = document.createElement('p');
       elementoP.innerText = 'Bloco 5 - JavaScript: DOM, Eventos e Web Storage';
-      document.elmentoSection.appendChild(elementoP);
+      elmentoSection.appendChild(elementoP);
 
       let elementoSection2 = document.createElement('section');
       elementoSection2.className = 'left-content';
-      document.elementoMain.appendChild(elementoSection2);
+      elementoMain.appendChild(elementoSection2);
+
+      let elementoselecion3 = document.createElement('selection');
+      elementoselecion3.className = 'right-content';
+      elementoMain.appendChild(elementoselecion3);
+
+      let elementoImag = document.createElement('imag');
+      elementoImag.className = 'small-image';
+      elementoImag.src = 'https://picsum.photos/200';
+      elementoSection2.appendChild(elementoImag);
+      
+
+
 
     </script>
   </body> 
