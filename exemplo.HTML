@@ -86,9 +86,15 @@
       elementoImag.className = 'small-image';
       elementoImag.src = 'https://picsum.photos/200';
       elementoSection2.appendChild(elementoImag);
-      
 
-
+      let elementoLu = document.createElement ('lu');
+      elementoselecion3.appendChild(elementoLu);
+      elementoLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let index in elementoLista){
+        let elemntoLi = document.createElement('li');
+        elementoLi.innerHTML = elementoLista[index];
+        elementoLu.appendChild(elementoLi);
+      }
 
     </script>
   </body> 
