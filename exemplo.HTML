@@ -62,33 +62,33 @@
       elementoH1.innerText = 'Exercício 5.2 - JavaScript DOM';
       document.body.appendChild(elementoH1);
 
-      let elementoMain = document.createElement('main');
-      elementoMain.classList.add('main-content');
-      document.body.appendChild(elementoMain);
+      let main = document.createElement('main');
+      main.className = 'main-content';
+      document.body.appendChild(main);
 
-      let elmentoSection = document.createElement('section');
-      elmentoSection.classList.add('center-content');
-      elementoMain.appendChild(elementoSection);
+      let elementoSection = document.createElement('section');
+      elementoSection.className = 'center-content';
+      main.appendChild(elementoSection);
 
       let elementoP = document.createElement('p');
-      elementoP.innerText = 'Bloco 5 - JavaScript: DOM, Eventos e Web Storage';
-      elmentoSection.appendChild(elementoP);
+      elementoP.innerHTML = 'Bloco 5 - JavaScript: DOM, Eventos e Web Storage';
+      elementoSection.appendChild(elementoP);
 
       let elementoSection2 = document.createElement('section');
       elementoSection2.classList.add('left-content');
-      elementoMain.appendChild(elementoSection2);
+      main.appendChild(elementoSection2);
 
-      let elementoselecion3 = document.createElement('selection');
-      elementoselecion3.classList.add('right-content');
-      elementoMain.appendChild(elementoselecion3);
+      let elementosection3 = document.createElement('section');
+      elementosection3.classList.add('right-content');
+      main.appendChild(elementosection3);
 
-      let elementoImag = document.createElement('imag');
+      let elementoImag = document.createElement('img');
       elementoImag.className = 'small-image';
       elementoImag.src = 'https://picsum.photos/200';
       elementoSection2.appendChild(elementoImag);
 
-      let elementoLu = document.createElement ('lu');
-      elementoselecion3.appendChild(elementoLu);
+      let elementoUl = document.createElement ('ul');
+      elementosection.appendChild(elementoUl);
       elementoLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
       for (let index in elementoLista){
         let elemntoLi = document.createElement('li');
@@ -98,8 +98,8 @@
 
       for (let index = 0; index < 3; index +=1){
         let elmentoH3 = document.createElement('h3');
-        elementoH3.innerHTML = 'teste' +index;
-        elementoMain.appendChild(elementoH3);
+        elementoH3.innerHTML = 'teste' + index;
+        main.appendChild(elementoH3);
       }
       // Parte 2, exercicio
 
@@ -112,16 +112,17 @@
       }
       
       let removeLeftContent = document.getElementsByClassName('left-content')[0];
-      elementoMain.removeChild(removeLeftContent);
+      main.removeChild(removeLeftContent);
 
       let centralizaSection = document.getElementsByClassName('right-content')[0];
-      centralizaSection.style.marginRight='auto';
+      centralizaSection.style.marginRight = 'auto';
       
       let colorPaiSection = document.getElementsByClassName('center-content')[0];
       colorPaiSection.parentNode.style.backgroundColor = 'green';
 
       ul.lastChild.remove();
       ul.lastChild.remove();
+
     </script>
   </body> 
 </html>
